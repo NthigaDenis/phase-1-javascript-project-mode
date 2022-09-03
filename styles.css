@@ -1,264 +1,145 @@
-@font-face {
-
-    font-family: Montserrat;
-
-    src: url(fonts/Montserrat-Regular.ttf);
-
-}
-
-
-
-* {
-
-    box-sizing: border-box;
-
-    font-family: Montserrat;
-
-}
-
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
 body {
-
-    background-color: lightsteelblue;
-
-    background-image: url("bg.jpg");
-
-    height: 600px;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    background-size: cover;
-
+    font-family: 'Poppins', sans-serif;
 }
-
-
-
-.container {
-
-    width: 50%;
-
-    background-color: #fff;
-
-    align-self: center;
-
-    display: block;
-
-    margin: 120px auto;
-
-    box-shadow: 5px 10px 20px black;
-
-}
-
-
 
 ul {
-
-    margin: 0;
-
-    border-left: 6px solid teal;
-
-    list-style-type: none;
-
     padding: 0;
-
-}
-
-
-
-ul li {
-
-    cursor: pointer;
-
-    position: relative;
-
-    padding: 12px 8px 12px 40px;
-
-    background: #eee;
-
-    font-size: 18px;
-
-    transition: 0.2s;
-
-
-
-    -webkit-user-select: none;
-
-    -moz-user-select: none;
-
-    -ms-user-select: none;
-
-    user-select: none;
-
-}
-
-
-
-ul li:nth-child(odd) {
-
-    background: #f9f9f9;
-
-}
-
-
-
-ul li:hover {
-
-    background: #ddd;
-
-}
-
-
-
-ul li.checked {
-
-    background: #888;
-
-    color: #fff;
-
-    text-decoration: line-through;
-
-}
-
-
-
-ul li.checked::before {
-
-    content: "";
-
-    position: absolute;
-
-    border-color: #fff;
-
-    border-style: solid;
-
-    border-width: 0 2px 2px 0;
-
-    top: 10px;
-
-    left: 16px;
-
-    transform: rotate(45deg);
-
-    height: 15px;
-
-    width: 7px;
-
-}
-
-
-
-.close {
-
-    position: absolute;
-
-    right: 0;
-
-    top: 0;
-
-    padding: 12px 16px 12px 16px;
-
-}
-
-
-
-.close:hover {
-
-    background-color: #f44336;
-
-    color: white;
-
-}
-
-
-
-.header {
-
-    background-color: teal;
-
-    padding: 30px 30px;
-
-    color: white;
-
-    text-align: center;
-
-}
-
-
-
-.header:after {
-
-    content: "";
-
-    display: table;
-
-    clear: both;
-
-}
-
-
-
-input {
-
     margin: 0;
-
-    border: none;
-
-    border-radius: 0;
-
-    width: 75%;
-
-    padding: 10px;
-
-    float: left;
-
-    font-size: 16px;
-
 }
 
-
-
-.addBtn {
-
-    padding: 10px;
-
-    width: 25%;
-
-    background: #d9d9d9;
-
-    color: #555;
-
-    float: left;
-
+h1 {
     text-align: center;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
-    border-radius: 0;
-
 }
 
-
-
-.addBtn:hover {
-
-    background-color: #bbb;
-
+li {
+    list-style: none;
+    padding: 5px;
+    font-size: 17px;
 }
 
+.nav-bar ul li {
+    margin: 2px;
+}
 
+.list_present li:nth-child(odd) {
+    background: #d3d3d3;
+}
 
-div.relative {
+.list_present {
+    max-height: 500px;
+    width: 800px;
+    overflow-x: scroll;
+    border: solid;
+    margin: 0 auto;
+}
 
-    position: absolute;
+.removeBook {
+    margin-right: 5px;
+    float: right;
+    height: 25px;
+    box-shadow: 5px 5px;
+}
 
-    top: 600px;
+.divider {
+    width: 200px;
+    border: solid;
+    margin: 30px auto;
+}
 
-    right: 75px;
+.addBookForm {
+    text-align: center;
+}
+
+.addBookForm input[type=text] {
+    width: 100%;
+    border: solid 2px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.addBookForm ul {
+    margin: 0 auto;
+}
+
+.addBookForm input[type=button] {
+    width: 50px;
+    box-shadow: 5px 5px;
+    margin-right: 0;
+    float: right;
+}
+
+.wrapText {
+    width: 400px;
+    word-break: break-all;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    border: solid 2px black;
+    padding: 10px;
+    position: relative;
+}
+
+.wrapper {
+    border: solid 2px rgb(235, 135, 135);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar ul li:nth-child(2) {
+    border-right: solid 2px black;
+}
+
+.nav-bar ul li:nth-child(3) {
+    border-right: solid 2px black;
+}
+
+.appname {
+    flex: 5;
+}
+
+.todaysDate {
+    text-align: right;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.contactSection {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contactSection,
+.addBookSection {
+    display: none;
+}
+
+.addBookSection {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.msg {
+    color: red;
+    display: none;
+    transition: 4s;
 }
