@@ -27,26 +27,27 @@ class Books {
     while (this.showBooksElement.firstChild) {
       this.showBooksElement.removeChild(this.showBooksElement.firstChild);
     }
-/*
- if (this.booksData.length > 0) {
-   this.booksData.forEach((book) => {
-     this.showBooksElement.appendChild(Books.createBookDisplay(book));
-   });
- } else {
-   this.showBooksElement.appendChild(Books.createBookDisplay({}, true));
- }
-}
 
-add(title, author) {
- const bookId = Math.random().toString(36).slice(2);
- this.booksData.unshift({
-   id: bookId,
-   title,
-   author,
- });
- this.updateStorage();
- this.updateUI();
-}
+    if (this.booksData.length > 0) {
+      this.booksData.forEach((book) => {
+        this.showBooksElement.appendChild(Books.createBookDisplay(book));
+      });
+    } else {
+      this.showBooksElement.appendChild(Books.createBookDisplay({}, true));
+    }
+  }
+
+  add(title, author) {
+    const bookId = Math.random().toString(36).slice(2);
+    this.booksData.unshift({
+      id: bookId,
+      title,
+      author,
+    });
+    this.updateStorage();
+    this.updateUI();
+  }
+/*
 
 remove(bookId) {
  this.booksData = this.booksData.filter((books) => books.id !== bookId);
