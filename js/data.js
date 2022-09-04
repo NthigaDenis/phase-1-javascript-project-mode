@@ -4,11 +4,11 @@ class Books {
     this.showBooksElement = element;
     this.booksData = storedItems;
   }
-/*
+
   updateStorage() {
     localStorage.setItem('bookData', JSON.stringify(this.booksData));
   }
-
+/*
   static createBookDisplay(book, empty = false) {
     const li = document.createElement('li');
     if (!empty) {
