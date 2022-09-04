@@ -16,18 +16,18 @@ class Books {
                         <span class="wrapText"> "${book.title}" by - <i><b>${book.author}</b></i> </span>
                           <input type="button" value="Remove" id="${book.id}" class="removeBook" onClick="removeBook('${book.id}')"/>
                         </p>`;
-   /* } else {
-   li.innerHTML = '<h3>oops!! sorry guys!!! seems there are no books available yet!!</h3>';
- }
+    } else {
+      li.innerHTML = '<h3>oops!! sorry guys!!! seems there are no books available yet!!</h3>';
+    }
 
- return li;
-}
+    return li;
+  }
 
-updateUI() {
- while (this.showBooksElement.firstChild) {
-   this.showBooksElement.removeChild(this.showBooksElement.firstChild);
- }
-
+  updateUI() {
+    while (this.showBooksElement.firstChild) {
+      this.showBooksElement.removeChild(this.showBooksElement.firstChild);
+    }
+/*
  if (this.booksData.length > 0) {
    this.booksData.forEach((book) => {
      this.showBooksElement.appendChild(Books.createBookDisplay(book));
