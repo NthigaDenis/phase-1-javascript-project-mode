@@ -4,7 +4,7 @@ class Books {
     this.showBooksElement = element;
     this.booksData = storedItems;
   }
-
+/*
   updateStorage() {
     localStorage.setItem('bookData', JSON.stringify(this.booksData));
   }
@@ -53,4 +53,4 @@ class Books {
     this.updateStorage();
     this.updateUI();
   }
-}
+}*/
