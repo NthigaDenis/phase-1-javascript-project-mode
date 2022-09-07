@@ -1,4 +1,22 @@
+function name(x) {
+  fetch('https:/30000', {
+    method: 'POST',
+    headers: {
+      'content-Type': 'application/json',
+      Accept: 'appliation/json'
+    },
+    body: JSON.stringify({})
 
+  })
+    .then(resp => resp.json)
+    .then(x => { })
+
+  async function get() {
+    let data = class Books
+}
+  get()
+
+}
 class Books {
   constructor(element, storedItems) {
     this.showBooksElement = element;
@@ -47,11 +65,10 @@ class Books {
     this.updateStorage();
     this.updateUI();
   }
-/*
 
-remove(bookId) {
- this.booksData = this.booksData.filter((books) => books.id !== bookId);
- this.updateStorage();
- this.updateUI();
+  remove(bookId) {
+    this.booksData = this.booksData.filter((books) => books.id !== bookId);
+    this.updateStorage();
+    this.updateUI();
+  }
 }
-}*/

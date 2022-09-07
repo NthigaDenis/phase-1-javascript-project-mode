@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+/* Setting up easy navagation techniques*/
+
 const removeBtn = document.querySelectorAll('.removeBook');
 const titleInput = document.querySelector('#book_title');
 const authorInput = document.querySelector('#book_author');
@@ -35,7 +35,7 @@ function addBook() {
         msg.style.display = "block";
         setTimeout(() => {
             msg.style.display = "none";
-        }, 2000);
+        }, 3000);
         addForm.reset();
     }
 }
