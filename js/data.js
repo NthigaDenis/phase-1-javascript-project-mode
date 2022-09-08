@@ -1,5 +1,6 @@
 function name(x) {
-  fetch('https:/30000', {
+  fetch('http://localhost:3000', {
+
     method: 'POST',
     headers: {
       'content-Type': 'application/json',

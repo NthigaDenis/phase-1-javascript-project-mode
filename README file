@@ -5,9 +5,9 @@ The applications allows a user to mannually write books add books into a list by
 
 it also has a link that allows the user to see the list of book he/she has typed in
 
-the application also has an about me section that allows the user to  add the access the information about the creator of the app
+the application also has an about me section that allows the user to  access the information about the creator of the app
 
-The application also incorporates a functio that allows user to delete a single entity of book in the list through a delete button
+The application also incorporates a function that allows user to delete a single entity of book in the list through a delete button
 
 The applicaion is pure Javascript with no farameworks used is made up of 
 1.    3 javascript files
@@ -15,4 +15,4 @@ The applicaion is pure Javascript with no farameworks used is made up of
 3.     1 HTML file 
 
 
-The application also includes a fetch funtions that allows user to fetch information from  known API and  post it in the  webpage
+The application also includes a fetch funtions that allows user to POST data  to the local API
