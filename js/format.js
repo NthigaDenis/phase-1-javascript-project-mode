@@ -1,5 +1,4 @@
 /* Setting up easy navagation techniques*/
-
 const removeBtn = document.querySelectorAll('.removeBook');
 const titleInput = document.querySelector('#book_title');
 const authorInput = document.querySelector('#book_author');
@@ -35,7 +34,7 @@ function addBook() {
         msg.style.display = "block";
         setTimeout(() => {
             msg.style.display = "none";
-        }, 3000);
+        }, 2000);
         addForm.reset();
     }
 }

@@ -13,11 +13,14 @@ function name(x) {
     .then(x => { })
 
   async function get() {
+
     let data = class Books
 }
+
   get()
 
 }
+
 class Books {
   constructor(element, storedItems) {
     this.showBooksElement = element;
@@ -32,11 +35,11 @@ class Books {
     const li = document.createElement('li');
     if (!empty) {
       li.innerHTML = `<p>
-                        <span class="wrapText"> "${book.title}" by - <i><b>${book.author}</b></i> </span>
-                          <input type="button" value="Remove" id="${book.id}" class="removeBook" onClick="removeBook('${book.id}')"/>
-                        </p>`;
+                    <span class="wrapText"> "${book.title}" by - <i><b>${book.author}</b></i> </span>
+                        <input type="button" value="Remove" id="${book.id}" class="removeBook" onClick="removeBook('${book.id}')"/>
+                      </p>`;
     } else {
-      li.innerHTML = '<h3>oops!! sorry guys!!! seems there are no books available yet!!</h3>';
+      li.innerHTML = '<h3>No books available</h3>';
     }
 
     return li;
