@@ -1,0 +1,18 @@
+NTHIGA DENIS PROJECT is a simple project that accesses the weather of any major city in the world 
+
+its fetches data from an API and if the key is correct returns the current climatic condition of the City.
+
+
+The applicaion is pure Javascript with no frameworks used.
+it is made up of :
+1.    a javascript files
+2.     a css file for styling the webpage
+3.     a HTML file 
+
+The project is functional and is a true representation of my work.
+
+for proper functionality of the project the live server  should be on...i.e. you run the  commnad
+
+```live server --watch db.json ```
+
+The project uses a Private API on openweather.org that you have to create an account with the organisation to use their API keys
