@@ -16,3 +16,6 @@ for proper functionality of the project the live server  should be on...i.e. you
 ```live server --watch db.json ```
 
 The project uses a Private API on openweather.org that you have to create an account with the organisation to use their API keys
+
+
+The project represents my own thinking and is my own pure woeking 
