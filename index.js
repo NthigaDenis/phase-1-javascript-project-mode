@@ -1,47 +1,54 @@
-const removeBtn = document.querySelectorAll('.removeBook');
-const titleInput = document.querySelector('#book_title');
-const authorInput = document.querySelector('#book_author');
-const addBookBtn = document.querySelector('#add_book');
-const addForm = document.querySelector('.addBookForm');
-const bookList = document.querySelector('.list_present');
-const msg = document.querySelector('.msg');
+let weather = {
+    apiKey: "API KEY GOES HERE",
+    fetchWeather: function (city) {
+        fetch(
+            "https://api.openweathermap.org/data/2.5/weather?q=" +
+            city +
+            "&units=metric&appid=" +
+            this.apiKey
+        )
+            .then((response) => {
+                if (!response.ok) {
+                    alert("No weather found.");
+                    throw new Error("No weather found.");
+                }
+                return response.json();
+            })
+            .then((data) => this.displayWeather(data));
+    },
+    displayWeather: function (data) {
+        const { name } = data;
+        const { icon, description } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+        document.querySelector(".city").innerText = "Weather in " + name;
+        document.querySelector(".icon").src =
+            "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".description").innerText = description;
+        document.querySelector(".temp").innerText = temp + "°C";
+        document.querySelector(".humidity").innerText =
+            "Humidity: " + humidity + "%";
+        document.querySelector(".wind").innerText =
+            "Wind speed: " + speed + " km/h";
+        document.querySelector(".weather").classList.remove("loading");
+        document.body.style.backgroundImage =
+            "url('https://source.unsplash.com/1600x900/?" + name + "')";
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".search-bar").value);
+    },
+};
 
-/* Navigation controls */
-const listLink = document.querySelector('.list');
-const addLink = document.querySelector('.add');
-const contactLink = document.querySelector('.contact');
+document.querySelector(".search button").addEventListener("click", function () {
+    weather.search();
+});
 
-const listSection = document.querySelector('.bookListSection');
-const addSection = document.querySelector('.addBookSection');
-const contactSection = document.querySelector('.contactSection');
-/* Navigation controls end */
+document
+    .querySelector(".search-bar")
+    .addEventListener("keyup", function (event) {
+        if (event.key == "Enter") {
+            weather.search();
+        }
+    });
 
-const dateContainer = document.querySelector('.todaysDate');
-
-let localStorageData = JSON.parse(localStorage.getItem('bookData'));
-
-if (localStorageData === null) {
-    localStorageData = [];
-}
-const booksBinding = new Books(bookList, localStorageData);
-
-function addBook() {
-    const title = titleInput.value;
-    const author = authorInput.value;
-    if (title !== '' && author !== '') {
-        booksBinding.add(title, author);
-        msg.style.display = "block";
-        setTimeout(() => {
-            msg.style.display = "none";
-        }, 2000);
-        addForm.reset();
-    }
-}
-
-function removeBook(bookId) {
-    booksBinding.remove(bookId);
-}
-
-addBookBtn.addEventListener('click', addBook);
-
-window.onresize = booksBinding.updateUI();
+weather.fetchWeather("Denver");
