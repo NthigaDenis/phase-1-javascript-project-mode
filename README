@@ -19,3 +19,6 @@ The project uses a Private API on openweather.org that you have to create an acc
 
 
 The project represents my own thinking and is my own pure woeking 
+
+On the search button you enter a CIty name i.e an International city eg 
+Nairobi, tokyo,accra but not small towns as the API is worlwide
